@@ -14,8 +14,8 @@ Gem::Specification.new do |s|
   s.email = ["Martin.Bosslet@googlemail.com"]
   s.extensions = ["ext/openssl_ext/extconf.rb"]
   s.extra_rdoc_files = ["History.rdoc", "Manifest.txt", "README.rdoc"]
-  s.files = [".autotest", "History.rdoc", "Manifest.txt", "README.rdoc", "Rakefile", "ext/openssl_ext/extconf.rb", "lib/openssl_ext.rb", "test/test_openssl_ext.rb"]
-  s.homepage = "{img src=\"https://travis-ci.org/eManPrague/openssl-ext.svg\" alt=\"Build Status\" /}[https://travis-ci.org/eManPrague/openssl-ext]"
+  s.files `git ls-files README.rdoc History.rdoc LICENSE ext lib support`.split
+  s.homepage = 'https://github.com/eManPrague/openssl-ext'
   s.licenses = ["BSDL"]
   s.rdoc_options = ["--main", "README.rdoc"]
   s.rubygems_version = "2.2.2"

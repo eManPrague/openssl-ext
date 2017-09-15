@@ -5,7 +5,6 @@ require "hoe"
 
 Hoe.plugin :bundler
 Hoe.plugin :compiler
-Hoe.plugin :gemspec
 Hoe.plugin :minitest
 Hoe.plugin :rdoc
 

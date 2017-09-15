@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
-# stub: openssl_ext 1.0.0.20170915083332 ruby lib
+# stub: openssl_ext 0.0.2.20170915090330 ruby lib
 # stub: ext/openssl_ext/extconf.rb
 
 Gem::Specification.new do |s|
   s.name = "openssl_ext"
-  s.version = "1.0.0.20170915083332"
+  s.version = "0.0.2.20170915090330"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.extensions = ["ext/openssl_ext/extconf.rb"]
   s.extra_rdoc_files = ["History.rdoc", "Manifest.txt", "README.rdoc"]
   s.files = [".autotest", "History.rdoc", "Manifest.txt", "README.rdoc", "Rakefile", "ext/openssl_ext/extconf.rb", "lib/openssl_ext.rb", "test/test_openssl_ext.rb"]
-  s.homepage = "Provides additional features that are not yet available in the OpenSSL"
+  s.homepage = "{img src=\"https://travis-ci.org/eManPrague/openssl-ext.svg\" alt=\"Build Status\" /}[https://travis-ci.org/eManPrague/openssl-ext]"
   s.licenses = ["BSDL"]
   s.rdoc_options = ["--main", "README.rdoc"]
   s.rubygems_version = "2.2.2"

@@ -12,6 +12,7 @@ Hoe.plugin :rdoc
 Hoe.spec "openssl_ext" do
   developer("Martin Bosslet", "Martin.Bosslet@googlemail.com")
   license "BSDL"
+  version
   extension 'openssl_ext'
 end
 

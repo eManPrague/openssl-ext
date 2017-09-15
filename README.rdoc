@@ -11,7 +11,7 @@ will be exported to this gem to make them available instantly.
 
 Just add into your gemfile:
 
-  gem "openssl_ext", "0.0.2", github: "eManPrague/openssl_ext"
+  gem "openssl_ext", "0.0.2", github: "eManPrague/openssl-ext"
 
 == Call remote TSA service
 

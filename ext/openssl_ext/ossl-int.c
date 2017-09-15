@@ -11,7 +11,7 @@
 #include "ossl-int.h"
 #include <stdarg.h> /* for ossl_raise */
 
-void Init_ext(void)
+void Init_openssl_ext(void)
 {
     /*
      * Init components

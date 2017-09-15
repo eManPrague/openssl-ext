@@ -69,7 +69,7 @@ module OpenSSL
     end
   end
   
-  class TestTimestamp < MiniTest::Unit::TestCase
+  class TestTimestamp < MiniTest::Test
     include OpenSSL::TestUtils
 
     INTERMEDIATE_KEY = OpenSSL::PKey::RSA.new <<-_end_of_pem_
@@ -381,7 +381,7 @@ GaL27FRs4fRWf9OmxPhUVgIyGzLGXrueemvQUDHObA==
         end
         ts.verify(req, File.open('root_ca', 'rb'), INTERMEDIATE_CERT)
       ensure
-        if File.exists?('root_ca')
+        if File.exist?('root_ca')
             File.delete('root_ca')
         end
       end

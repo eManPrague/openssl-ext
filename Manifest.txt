@@ -1,0 +1,7 @@
+.autotest
+History.rdoc
+Manifest.txt
+README.rdoc
+Rakefile
+lib/openssl_ext.rb
+test/test_openssl_ext.rb

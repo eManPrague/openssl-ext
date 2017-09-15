@@ -41,5 +41,6 @@ end
 message "=== Checking done. ===\n"
 
 create_header
-create_makefile("openssl/ext")
+create_makefile("openssl_ext")
+
 message "Done.\n"

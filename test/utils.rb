@@ -1,6 +1,7 @@
 require "openssl"
-require "openssl/ext"
-require "test/unit"
+require "openssl_ext"
+require 'minitest/autorun'
+
 
 module OpenSSL::TestUtils
   TEST_KEY_RSA1024 = OpenSSL::PKey::RSA.new <<-_end_of_pem_

@@ -1,49 +1,20 @@
-require 'rubygems'
-require 'rake'
-require 'rake/clean'
-require 'rake/gempackagetask'
-require 'rake/rdoctask'
-require 'rake/testtask'
-require 'rake/extensiontask'
+# -*- ruby -*-
 
-spec = Gem::Specification.new do |s|
-  s.name = 'openssl-ext'
-  s.version = '0.0.1'
-  s.has_rdoc = true
-  s.extra_rdoc_files = ['README.rdoc', 'LICENSE']
-  s.summary = 'Provides additional features for the OpenSSL standard library.'
-  s.description = <<-EOF 
-    OpenSSL extensions provides additional features that currently do not exist
-    in this form in the OpenSSL standard library. E.g., OpenSSL extensions 
-    provides support for RFC 3161 timestamps. 
-  EOF
-  s.author = 'Martin Bosslet'
-  s.email = 'Martin.Bosslet@googlemail.com'
-  s.homepage = 'https://github.com/emboss'
-  s.extensions << 'ext/openssl/ext/extconf.rb'
-  s.files = %w(LICENSE README.rdoc Rakefile) + Dir.glob("{bin,ext,lib,spec,test}/**/*")
-	s.test_files = FileList['test/**/test_*.rb']
-  s.require_path = "lib"
-  s.bindir = "bin"
+require "rubygems"
+require "hoe"
+
+Hoe.plugin :bundler
+Hoe.plugin :compiler
+Hoe.plugin :gemspec
+Hoe.plugin :minitest
+Hoe.plugin :rdoc
+
+Hoe.spec "openssl_ext" do
+  developer("Martin Bosslet", "Martin.Bosslet@googlemail.com")
+  license "BSDL"
+  extension 'openssl_ext'
 end
 
-Rake::GemPackageTask.new(spec) do |p|
-  p.gem_spec = spec
-  p.need_tar = true
-  p.need_zip = true
-end
+Rake::Task[:test].prerequisites << :compile
 
-Rake::ExtensionTask.new('openssl/ext', spec)
-
-Rake::RDocTask.new do |rdoc|
-  files =['README.rdoc', 'LICENSE', 'lib/**/*.rb', 'ext/**/*.c']
-  rdoc.rdoc_files.add(files)
-  rdoc.main = "README.rdoc" # page to start on
-  rdoc.title = "openssl-ext Docs"
-  rdoc.rdoc_dir = 'doc/rdoc' # rdoc output folder
-end
-
-Rake::TestTask.new do |t|
-  t.test_files = FileList['test/**/*.rb']
-end
-
+# vim: syntax=ruby

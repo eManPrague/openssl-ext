@@ -1,5 +1,7 @@
 = openssl-ext
 
+{<img src="https://travis-ci.org/eManPrague/openssl-ext.svg" alt="Build Status" />}[https://travis-ci.org/eManPrague/openssl-ext]
+
 Provides additional features that are not yet available in the OpenSSL
 standard library. The features of this gem are derived from
 {ruby-openssl}[https://github.com/emboss/ruby-openssl]. Stable features

@@ -1,4 +1,4 @@
-require File.expand_path('../lib/openssl_ext', __FILE__)
+require File.expand_path('../lib/openssl_ext/version', __FILE__)
 
 Gem::Specification.new do |s|
   s.name = "openssl_ext"

@@ -7,9 +7,10 @@ Gem::Specification.new do |s|
   s.email = ["Martin.Bosslet@googlemail.com"]
   s.extensions = ["ext/openssl_ext/extconf.rb"]
   s.homepage = 'https://github.com/eManPrague/openssl-ext'
-  s.licenses = "BSDL"
+  s.licenses = ["BSDL"]
   s.summary = "Beta extension for OpenSSL before it will be added into ruby core."
 
+  s.require_paths = ["lib", "ext"]
   s.files = `git ls-files README.rdoc History.rdoc LICENSE ext lib support`.split
   s.test_files = `git ls-files test`.split
 

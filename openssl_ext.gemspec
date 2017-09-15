@@ -1,11 +1,8 @@
-# -*- encoding: utf-8 -*-
-# stub: openssl_ext 0.0.2.20170915090330 ruby lib
-# stub: ext/openssl_ext/extconf.rb
+require File.expand_path('../lib/openssl_ext', __FILE__)
 
 Gem::Specification.new do |s|
   s.name = "openssl_ext"
-  s.version = "0.0.2.20170915090330"
-
+  s.version = OpenSSLExt::Version
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Martin Bosslet"]
@@ -14,7 +11,7 @@ Gem::Specification.new do |s|
   s.email = ["Martin.Bosslet@googlemail.com"]
   s.extensions = ["ext/openssl_ext/extconf.rb"]
   s.extra_rdoc_files = ["History.rdoc", "Manifest.txt", "README.rdoc"]
-  s.files `git ls-files README.rdoc History.rdoc LICENSE ext lib support`.split
+  s.files = `git ls-files README.rdoc History.rdoc LICENSE ext lib support`.split
   s.homepage = 'https://github.com/eManPrague/openssl-ext'
   s.licenses = ["BSDL"]
   s.rdoc_options = ["--main", "README.rdoc"]

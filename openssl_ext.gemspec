@@ -2,7 +2,7 @@ require File.expand_path('../lib/openssl_ext/version', __FILE__)
 
 Gem::Specification.new do |s|
   s.name = "openssl_ext"
-  s.version = OpenSSLExt::Version
+  s.version = OpenSSLExt::VERSION
   s.authors = ["Martin Bosslet"]
   s.email = ["Martin.Bosslet@googlemail.com"]
   s.extensions = ["ext/openssl_ext/extconf.rb"]
